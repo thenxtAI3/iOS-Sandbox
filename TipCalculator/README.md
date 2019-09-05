@@ -11,7 +11,9 @@ Time spent: **1** hour spent in total
 The following **required** functionality is complete:
 
 * [X] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
-<iframe src="https://giphy.com/embed/cPHXJoWJu046YZvi1j" width="236" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cPHXJoWJu046YZvi1j">via GIPHY</a></p>
+![](https://giphy.com/gifs/cPHXJoWJu046YZvi1j)
+
+<img src="https://giphy.com/gifs/cPHXJoWJu046YZvi1j" alt="Thing working">
 
 The following **optional** features are implemented:
 * [ ] Settings page to change the default tip percentage.
@@ -30,9 +32,6 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
--Embed link to gif below 
-
-GIF created with [Giphy](https://giphy.com/gifs/cPHXJoWJu046YZvi1j).
 
 ## Notes
 
