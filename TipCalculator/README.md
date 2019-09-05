@@ -11,9 +11,8 @@ Time spent: **1** hour spent in total
 The following **required** functionality is complete:
 
 * [X] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
-![](https://giphy.com/gifs/cPHXJoWJu046YZvi1j)
 
-<img src="https://giphy.com/gifs/cPHXJoWJu046YZvi1j" alt="Thing working">
+<img src='https://giphy.com/gifs/cPHXJoWJu046YZvi1j' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 The following **optional** features are implemented:
 * [ ] Settings page to change the default tip percentage.
