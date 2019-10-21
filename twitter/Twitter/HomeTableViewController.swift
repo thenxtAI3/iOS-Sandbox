@@ -15,6 +15,10 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         loadTweet()
     }
     
@@ -32,7 +36,7 @@ class HomeTableViewController: UITableViewController {
 
             self.tableView.reloadData()
         }, failure: { (Error) in
-            print("Could not reteive tweets!")
+            print("Could not retreive tweets!")
         })
     }
 
@@ -51,12 +55,26 @@ class HomeTableViewController: UITableViewController {
         cell.tweetContent.text = tweetArray[indexPath.row]["text"] as? String
         cell.tweetContent.sizeToFit()
         
-        let imageUrl = URL(string: (user["profile_image_url_https"] as? String)!)
+        let imagePath = user["profile_image_url_https"] as! String
+        
+        let pathIndex = imagePath.index(imagePath.endIndex, offsetBy: -10)
+        let typeIndex = imagePath.index(imagePath.endIndex, offsetBy: -4)
+       
+        
+        let resultPath = imagePath[..<pathIndex] + "bigger" + imagePath[typeIndex...]
+        
+        let imageUrl = URL(string: (String(resultPath)))
+        
+        
         let data = try? Data(contentsOf: imageUrl!)
         
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
         }
+        
+        cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        
         
         return cell
     }
